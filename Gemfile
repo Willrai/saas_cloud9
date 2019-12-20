@@ -31,6 +31,8 @@ gem 'jbuilder', '2.5.0'
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platform: :mri
+  # Use sqlite3 as the database for Active Record
+  gem 'sqlite3', '1.3.13'
 end
 
 group :development do
@@ -43,8 +45,6 @@ group :development do
 end
 
 group :production do
-  # Use sqlite3 as the database for Active Record
-  gem 'sqlite3', '1.3.13'
   # Use the PostgreSQL gem for Heroku production servers
   gem 'pg', '0.18.4'
 end
